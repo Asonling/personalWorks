@@ -1,0 +1,112 @@
+.w_div{
+	width:750px;
+	min-height: 300px;
+}
+.w_face,.w_content,.w_who,.w_img,.w_text,.w_option{
+/*	border:1px solid #ddd;
+*/	margin:5px;
+}
+.w_face{
+	width:80px;
+	height:80px;
+	float: left;
+	margin-left:0;
+}
+.w_face img{
+	width:70px;
+	height:70px;
+	border-radius:35px; 
+	box-shadow: 0 0 3px #886767;
+}
+.w_content{
+	width:600px;
+	min-height: 300px;
+	float: left;
+	margin-right: 15px;
+	padding:10px;
+	box-shadow: 0 0 2px #5f5959;
+}
+.w_who{
+	width:100%;
+	height:30px;
+	line-height: 30px;
+	margin:5px 5px;
+}
+.w_who .item a{
+	margin-right: 10px;
+	display: inline-block;
+}
+.w_who .item a:link,
+.w_text a:link,.
+.w_option .item a:link{
+	color:#6D79DE;
+}
+.w_who .item a:hover,.w_who .item a:active,
+.w_text a:hover,.w_text a:active,
+.w_option .item a:hover,.w_option .item a:active{
+	color: #FFDB38;
+}
+.w_who span{
+	font-size: 12px;
+	color: #A29898;
+
+}
+.w_ct{
+	width:100%;
+	min-height: 200px;
+}
+.w_img{
+	position: relative;
+	min-width:200px;
+	max-height: 300px;
+	overflow: hidden;
+	float: left;
+	cursor: pointer;
+}
+.w_img .count_tips{
+	position: absolute;
+	display: block;
+	font-color: #fff;
+	width:28px;
+	height: 25px;
+	right:10px;
+	bottom: 10px;
+	text-align: center;
+	line-height: 25px;
+	background:rgba(39,40,34,.9);
+	border-radius: 3px; 
+}
+.w_text{
+	min-width: 200px;
+	max-height: 500px;
+	float: left; 
+	margin-left: 20px;
+}
+.w_text .bookName{
+	float:right;
+}
+.w_text a{
+	font-size: 15px;
+	font-weight: 500;
+	margin-bottom: 5px;
+	display: block;
+	color:#6D79DE;
+}
+.w_text p{
+	font-size: 13px;
+	color: #A29898;
+}
+.w_option{
+	height: 30px;
+	line-height: 30px;
+	width: 100%;
+	float: left;
+}
+.w_option .item a{
+	float: right;
+	font-size: 13px;
+	color: :#0000EE;
+	margin-right: 15px;
+}
+
+

@@ -1,0 +1,59 @@
+.shadowBox{
+	position: fixed;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background:#fff;
+	opacity: .5;
+	z-index:9999;
+}
+.loginBox{
+	position: absolute;
+	left:50%;
+	top:0;
+	z-index: 99999;
+	background: #fff;
+	width:300px;
+	height: 222px;
+	border: 1px solid transparent;
+	border-color: #ccc;
+	border-radius: 20px;
+	margin-left:-200px;
+	margin-top: 200px;
+	padding:20px;
+}
+.loginBox .form-horizontal .control-group{
+	margin-bottom: 20px;
+	font-size: 15px;
+}
+.control-group .control-label{
+	margin-bottom: 10px;
+	color: #4A3571;
+	font-weight: 700;
+}
+.control-group .controls input{
+	height: 25px;
+	width:250px;
+	line-height: 25px;
+	border-radius: 5px;
+	outline: none;
+	margin-top: 10px;
+}
+.controls .checkbox input{
+	width:20px;
+	height: 20px;
+	margin-right: 10px;
+}
+.controls{
+	height: 25px;
+	line-height: 25px;
+}
+.controls .btn{
+	height: 25px;
+	line-height: 25px;
+	width: 48px;
+	border-radius: 5px;
+	background: #EFE4ED;
+	cursor: pointer;
+}

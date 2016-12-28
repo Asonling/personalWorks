@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <title>双十一数据汇总</title>
+
+    <!-- 载入所有的组件资源 -->
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/lib/digit.js"></script>
+
+
+    <!-- H5对象：进行内容管理 -->
+
+    <script type="text/javascript" src="js/H5.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/H5.css" >
+
+    <script type="text/javascript" src="js/H5_loading.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/H5_loading.css" >
+
+    <!-- 页面逻辑的样式 -->
+    <style type="text/css">
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Microsoft Yahei';
+        }
+
+        .h5_page{
+            background-image: url(imgs/page_bg.jpg);
+        }
+        .h5_page_face{
+            background-image: url(imgs/face-bg.jpg);
+        }
+        
+        .h5_component_name_slogan{
+            -webkit-animation:rock 2s infinite 2s;
+        }
+        @-webkit-keyframes rock{
+            0%{ transform:rotate(0deg)}
+            5%{ transform:rotate(3deg)}
+            10%{ transform:rotate(-4deg)}
+            15%{ transform:rotate(3deg)}
+            20%{ transform:rotate(-2deg)}
+            25%{ transform:rotate(1deg)}
+            30%{ transform:rotate(-1deg)}
+            70%{ transform:rotate(0deg)}
+            100%{ transform:rotate(0deg)}
+        }
+
+        .h5_component_name_caption{
+            background-image: url(imgs/caption.png);
+            width: 300px;
+            height: 100px;
+            text-align: center;
+            line-height: 34px;
+            font-size: 25px;
+            color: #fff;
+        }
+        .h5_component_name_back{
+            bottom:30px;
+            -webkit-animation:back 2s infinite 2s;
+        }
+        
+        @-webkit-keyframes back{
+            50%{bottom:50px;}
+        }
+    </style>
+
+    
+    <body>
+
+    <div class="loading">
+
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+
+        <div id="rate">0%</div>
+
+    </div>
+    <!-- 加载 H5组件 相关资源 -->
+    <script type="text/javascript">
+
+        var res = [
+            'Base','Bar','Bar_v','Point','Polyline',
+            'Radar','Pie','Ring','Countdown'
+            ];
+        var html = [];
+        for(s in res){
+            html.push('<script type="text/javascript" src="js/H5Component'+res[s]+'.js"><\/script>');
+            html.push('<link rel="stylesheet" type="text/css" href="css/H5Component'+res[s]+'.css">');
+
+        }
+        document.write( html.join('') );
+    </script>
+    <!-- 主要逻辑 -->
+    <script type="text/javascript">
+
+       $(function  () {
+           
+            var h5 = new H5();
+
+            h5.whenAddPage = function(){
+                this.addComponent('slide_up',{
+                    bg:'imgs/footer.png',
+                    css:{
+                        opacity:0,
+                        left:0,bottom:-20,
+                        width:'100%',height:'20px',zIndex:999
+                    },
+                    animateIn:{
+                        opacity:1,bottom:'20px'
+                    },
+                    animateOut:{
+                        opacity:0,bottom:'-20px'
+                    },
+                    delay:500
+                });
+            }
+
+            h5
+            .addPage('face')
+                .addComponent('description',{
+                    width:570,
+                    height:295,center:true,
+                    css:{
+                        opacity:0,
+                        color:'#fff',
+                        fontSize:'16px',
+                        fontWeight:'500',
+                        lineHeight:'25px',
+                        textAlign:'justify',
+                        textIndent:'2em',
+                        top:300,
+                    },
+                    
+                    animateOut:{opacity:0,top:300},
+                    animateIn:{opacity:1,bottom:0},
+                    text: "'双十一'即指每年的11月11日，是指由电子商务为代表的，在全中国范围内兴起的大型购物促销狂欢日。2015年11月12日，第七个天猫双11全球狂欢节落下帷幕，全天交易额达912.17亿元，其中无线交易额为626.42亿元，无线成交占比68.67%。",
+                    center:true,
+                })
+                
+                            
+            .addPage()//历年销售总额
+                //polyline
+                .addComponent('polyline',{
+                    type:'polyline',
+                    data:[ ['2009',.5,'#ff7676'],
+                        ['2010',9.36],
+                        ['2011',33.6],
+                        ['2012',191],
+                        ['2013',352],
+                        ['2014',571],
+                        ['2015',912.7]],
+                    width:600,
+                    height:300,
+                   
+                    css:{opacity:0,top:300},
+
+                    animateIn:{opacity:1,top:300},
+                    animateOut:{opacity:0,top:100}, 
+                    center:true,
+                })
+                .addComponent('msg',{
+                    text:'2015年销售总额达到912.7亿元',
+                    css:{
+                        opacity:0,top:250,
+                        fontSize:'17px',
+                        textAlign:'center',width:'100%',color:'#ff7676'
+                    },
+                    animateIn:{ opacity:1},
+                    animateOut:{ opacity:0}
+                })
+
+            .addPage()//各主要板块销售百分比
+                //radar
+                .addComponent('radar',{
+                    type:'radar',
+                    data:[
+                        ['女装' , .9  ],
+                        ['家电' , .5  ],
+                        ['男装' , .5 ],
+                        ['童装' , .6  ],
+                        ['家电' , .3  ],
+                        ['数码' , .2  ],
+                        ['其他' , .5  ],
+                    ],
+                    css:{bottom:200 },
+                    width:400,
+                    height:400,
+                    center:true
+                })
+                .addComponent('msg',{
+                    text:'服装销售额居榜首 ',
+                    css:{
+                        opacity:0,bottom:100,fontSize:'17px',
+                        textAlign:'center',width:'100%',color:'#ff7676'
+                    },
+                    animateIn:{ opacity:1},
+                    animateOut:{ opacity:0}
+                })
+            .addPage()//主要销售产品占比
+                //point
+                .addComponent('point',{
+                    type : 'point',
+                    width : 300,
+                    height : 300,
+                    data:[
+                        ['女装' , .4  ,'#ff7676'],
+                        ['家电' , .2  ,'#FFD88C', 0 ,'-60%'],
+                        ['男装' , .3  ,'#DA8CFF', '50%' ,'-120%']
+                    ],
+                    css : {
+                        bottom:'15%'
+                    },
+                    center : true,
+                })
+
+
+            .addPage()//ring品牌效应影响
+                //ring
+                .addComponent('ring-0',{
+                    type : 'ring',center : true,
+                    width : 450,height : 450,
+                    data:[['ＯＮＬＹ' , .6  ,'#FF9D8C']],
+                    css : { bottom:150,opacity:0 ,fontSize:'30px'},
+                    animateIn: { opacity:1},
+                    animateOut:{ opacity:0},
+                })
+               .addComponent('msg',{
+                    text:'女装热卖品牌',
+                    css:{
+                        opacity:0,bottom:100,fontSize:'17px',
+                        textAlign:'center',width:'100%',color:'#ff7676'
+                    },
+                    animateIn:{ opacity:1},
+                    animateOut:{ opacity:0},
+                    delay:1800,
+                })
+
+            .addPage() //bar快递评价
+                
+                .addComponent('bar',
+                            {
+                                type : 'bar',
+                                
+                                width : 600,
+                                height : 600,
+                                data:[
+                                    ['圆通' , .9,],
+                                    ['申通' , .7  ],
+                                    ['中通' , .7 ],
+                                    ['韵达' , .6  ],
+                                    ['邮政' , .5 ],
+                                    ['顺丰' , .75 ],
+                                    ['天天' , .55  ]
+                                ],
+                                css : {
+                                    bottom:100,
+                                    opacity:0
+                                },
+                                animateIn:{
+                                    opacity:1,
+                                    bottom:100
+                                },
+                                animateOut:{
+                                    opacity:0,
+                                    bottom:-120,
+                                },
+                                center : true,
+                            }
+                )
+                .addComponent('msg',{
+                    text:'圆通快递几乎保持快递好评率',
+                    css:{
+                        opacity:0,bottom:120,fontSize:'17px',
+                        textAlign:'center',width:'100%',color:'#ff7676'
+                    },
+                    animateIn:{ opacity:1},
+                    animateOut:{ opacity:0}
+                })
+
+          
+            .addPage('countDown')//countdown
+                .addComponent('countdown',{type:'base',width:500,height:200,bg:'imgs/coming.png',css:{bottom:300
+                 },center:true})
+                .addComponent('time',{
+                    type:'time',
+                    width:680,
+                    height:480,
+                    radius:2,
+                    Left:10,
+                    Top: 0,
+                    css:{bottom:0,opacity:0 },
+                    animateIn:{opacity:1,bottom:0,},
+                    animateOut:{opacity:0,},
+                    center:true,
+                })
+
+            .addPage('tail')
+                .addComponent('slogan',{
+                    center:true,
+                    width:314,
+                    height:46,
+                    bg:'imgs/tail_slogan.png',
+                    css:{top:280,opacity:0},
+                    animateIn:{opacity:1,left:'50%'},
+                    animateOut:{opacity:0,left:'0%'},
+                    delay:500
+                })
+                .addComponent('share',{
+                    width:128,
+                    height:120,
+                    bg:'imgs/tail_share.png',
+                    css:{opacity:0,bottom:110, right:110},
+                    animateIn:{opacity:1,bottom:20 ,right:10},
+                    animateOut:{opacity:0,bottom:110,right:110},
+                    delay:1000 
+                })
+               
+            .loader(  ['imgs/tail_share.png','imgs/tail_slogan.png' ]);
+
+        });
+    </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,11 @@
+.gamediv{
+height:400px;
+width:500px;
+background-color:#EB8075;
+position:absolute;
+}
+.control{
+border:1px solid black;
+height:150px;
+width:100px;
+}

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset='utf-8'>
+	<title>分享社-让世界享你所享</title>
+	<meta http-equiv="X-UA-compatible" content='IE=edge'>
+	<link type="image/x-icon" href="../favicon/favicon.ico" rel="shortcut icon" />
+	<meta name='keywords' content='分享，摄影，衣橱，美妆'>
+	<meta name='discription' content='分享社-让世界享你所享'>
+
+	<!-- 引入css文件资源 -->
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="../css/PersonalCenter.css">
+
+	<!-- 引入js资源 -->
+	<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.js"></script>
+	<script type="text/javascript" src='../script/main.js'></script>
+	<script type="text/javascript" src='../script/login.js'></script>
+	<script type="text/javascript" src='../script/lightbox.js'></script>
+	
+</head>
+<body>
+<div class='container topBox'>
+	<div class='topBar'>
+		<div class='logo'><a href=""><img id='img' src="../image/logotext.png" height='80' width='180'></a></div>
+		<div class='search'>
+			<label style="position:absolute;top:4px;color:gray;"  onclick="labelEvent()">沈格格</label> 
+			<input type='text' onkeyup="inputEvent(this)"/>
+			<a href="#" type='button' ><i class='icon_search'></i>&nbsp;</a>			
+		</div>
+		<div class='personalCenter' id = 'PCenter' > 
+			<div class = 'personalFace defaultFace'>
+				<a href="javascript:void(0)">
+					<img src="../image/face/face.png" width='50' height='50'>
+				</a>
+			</div>
+			<div class = 'personalItem' id = "personalItem"> 
+				<ul>
+					<li><a href="">个人资料</a></li>
+					<li><a href="">权限设置</a></li>
+					<li><a href="">好友列表</a></li>
+					<li><a href="">退出</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='navBox' id='navBox'>
+		<div class='item hover'>
+			<a href="javascript:void(0)">首页</a>
+		</div>
+		<div class='item'>
+			<a href="../html/shoot.html" >摄影</a>
+		</div>
+		<div class='item'>
+			<a href="../html/clothes.html">衣橱</a>
+		</div>
+		<div class='item'>
+			<a href='../html/text.html'>文章</a>
+		</div>
+		<div class='item'>
+			<a href="../html/aboutUs.html">关于我们</a>
+		</div>		
+	</div>	
+</div>
+
+<div class='wrap middleBox'>
+	<div claas = 'wrap_container left_box'>
+		<div id = 'slideBox' class="slide_box">
+			<span class="slide-btn prev-btn-show"></span>
+			<span class="slide-btn next-btn-show"></span>
+			<ul class="slide_imgs">
+				<li class="slide_img"><a href=""><img src="../image/ad/homepage_ad1.jpg" width = '700' height = '200'></a></li>
+				<li class="slide_img"><a href=""><img src="../image/ad/homepage_ad2.jpg" width = '700' height = '200'></a></li>
+				<li class="slide_img"><a href=""><img src="../image/ad/homepage_ad3.jpg" width = '700' height = '200'></a></li>
+				<li class="slide_img"><a href=""><img src="../image/ad/homepage_ad4.jpg" width = '700' height = '200'></a></li>
+				<li class="slide_img"><a href=""><img src="../image/ad/homepage_ad5.jpg" width = '700' height = '200'></a></li>
+			</ul>
+		</div>
+		<!-- slide_box end -->
+		<div class="hot_words_box">
+			<a href=""><span class="hot_word_head">热门搜索</span></a>
+			<ul class="hot_words">
+				<li class="hot_word"><a href="">张小娴</a></li>
+				<li class="hot_word"><a href="">七格格</a></li>
+				<li class="hot_word"><a href="">晴碧琳</a></li>
+				<li class="hot_word"><a href="">糖力</a></li>
+				<li class="hot_word"><a href="">拉夏贝尔</a></li>
+				<li class="hot_word"><a href="">欧时力</a></li>
+				<li class="hot_word"><a href="">ONLY</a></li>
+				<li class="hot_word"><a href="">更多..</a></li>
+			</ul>
+		</div>
+		<!-- hot_words_box end -->
+		<!-- w_div start -->
+		<div class='w_div'>
+			<div class='w_face'><a href=""><img src="../image/face/face1.png" width='75' height="80"></a></div>
+			<div class='w_content'>
+				<div class='w_who'>
+					<div class='item'><a href="">沈格格</a><span>分享</span></div>
+				</div>
+				<div class='w_ct'>
+					<div class='w_text'>
+						<a href="#">张小娴:</a>
+						</br>
+						<p>爱情，就是彼此永不止息的思念，</p>
+						<p>是永远不放下的牵挂，</p>
+						<p>是心甘情愿的牵绊。</p>
+						</br>
+						<p class = 'bookName'>《想 念》</p>
+					</div>
+				</div>
+				<div class='w_option'>
+					<div class='item'><a href="javascript:void(0)">关注</a></div>
+					<div class='item'><a href="javascript:void(0)">赞</a></div>
+				</div>
+			</div>
+		</div>
+		<div class='w_div'>
+			<div class='w_face'><a href=""><img src="../image/face/下载.jpg" width='75' height="80"></a></div>
+			<div class='w_content'>
+				<div class='w_who'>
+					<div class='item'><a href="">美人至</a><span>分享</span></div>
+				</div>
+				<div class='w_ct'>
+					<div class='w_img'>
+							<span class='count_tips'></span>
+
+							<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/shoot/TXdScVU4cW1OQUNETWJFUDRVOE8rNTV5T1BkamxDZUZ1cG5wVUl2Y0JYSDBxUWEyQzdma29RPT0.jpg'
+										data-group = 'group-1'
+										data-id = 'a'
+										src="../image/shoot/TXdScVU4cW1OQUNETWJFUDRVOE8rNTV5T1BkamxDZUZ1cG5wVUl2Y0JYSDBxUWEyQzdma29RPT0.jpg" 
+										width='200' 
+										height='280' 
+										alt='水彩渲染的世界'>
+							<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/shoot/TXdScVU4cW1OQUNETWJFUDRVOE8rNTV5T1BkamxDZUZ1cG5wVUl2Y0JYSDBxUWEyQzdma29RPT0.jpg'
+										data-group = 'group-1'
+										data-id = 'b'
+										src="../image/shoot/TXdScVU4cW1OQUNETWJFUDRVOE8rNTV5T1BkamxDZUZ1cG5wVUl2Y0JYSDBxUWEyQzdma29RPT0.jpg" 
+										width='200' 
+										height='280' 
+										alt='水彩渲染的世界'>	
+							<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/shoot/1.jpg'
+										data-group = 'group-1'
+										data-id = 'dd'
+										src="../image/shoot/1.jpg" 
+										width='200' 
+										height='280' 
+										alt='水彩渲染的世界'>		
+							<img  class = 'js_lightbox'
+							data-role = 'lightbox'
+							data-source = '../image/shoot/5.jpg'
+							data-group = 'group-1'
+							data-id = 'ed'
+							src="../image/shoot/5.jpg" 
+							width='200' 
+							height='280' 
+							alt='水彩渲染的世界'>				
+						
+					</div>
+					<div class='w_text'>
+						<a href="">美人至:</a>
+						</br>
+						<p>新浪微博@阿梓酱Azzzi</p>
+					</div>
+				</div>
+				<div class='w_option' id='w_option'>
+					<div class='item'><a href="javascript:void(0)">关注</a></div>
+					<div class='item'><a href="javascript:void(0)">赞</a></div>
+				</div>
+			</div>
+		</div>
+		<div class='w_div'>
+			<div class='w_face'><a href=""><img src="../image/face/t0127d13f5cd666e7a2.jpg" width='75' height="80"></a></div>
+			<!-- face end -->
+			<div class='w_content'>
+				<div class='w_who'>
+					<div class='item'><a href="">七格格</a><span>分享</span></div>
+				</div>
+				<div class='w_ct'>
+					<div class='w_img'>
+						<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/clothes/TB1Y6D4KVXXXXXWXXXXSutbFXXX.jpg'
+										data-group = 'group-3'
+										data-id = 'b'
+										src="../image/clothes/TB1Y6D4KVXXXXXWXXXXSutbFXXX.jpg" 
+										width='520' 
+										height='280' 
+										alt='水彩渲染的世界'>
+					
+						<span class='count_tips'></span>
+					</div>
+					<div class='w_text'>
+						<a href="">七格格:</a>
+						</br>
+						<p>欢迎来到水彩渲染的世界！</p>
+					</div>
+				</div>
+				<div class='w_option' id='w_option'>
+					<div class='item'><a href="javascript:void(0)">关注</a></div>
+					<div class='item'><a href="javascript:void(0)">赞</a></div>
+				</div>
+			</div>
+		</div>
+		<div class='w_div'>
+			<div class='w_face'><a href=""><img src="../image/face/13336817038119.jpg" width='75' height="80"></a></div>
+			<div class='w_content'>
+				<div class='w_who'>
+					<div class='item'><a href="">美人至</a><span>分享</span></div>
+				</div>
+				<div class='w_ct'>
+					<div class='w_img'>
+						<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/clothes/TB12TI_KVXXXXb8XpXXSutbFXXX.jpg'
+										data-group = 'group-0'
+										data-id = 'b'
+										src="../image/clothes/TB12TI_KVXXXXb8XpXXSutbFXXX.jpg" 
+										width='520' 
+										height='280' >
+						
+						<span class='count_tips'></span>
+					</div>
+					<div class='w_text'>
+						<a href="">美人至:</a>
+						</br>
+						<p>新浪微博@阿梓酱Azzzi</p>
+					</div>
+				</div>
+				<div class='w_option' id='w_option'>
+					<div class='item'><a href="javascript:void(0)">关注</a></div>
+					<div class='item'><a href="javascript:void(0)">赞</a></div>
+				</div>
+			</div>
+		</div>
+		<div class='w_div'>
+			<div class='w_face'><a href=""><img src="../image/face/1_121119144404_1.jpg" width='75' height="80"></a></div>
+			<div class='w_content'>
+				<div class='w_who'>
+					<div class='item'><a href="">伊丝艾拉YISELLE</a><span>分享</span></div>
+				</div>
+				<div class='w_ct'>
+					<div class='w_img'>
+						<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/clothes/51005182_570x273_90.jpg'
+										data-group = 'group-5'
+										data-id = 'b'
+										src="../image/clothes/51005182_570x273_90.jpg" 
+										width='520' 
+										height='280' 
+										alt='水彩渲染的世界'>
+						<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/clothes/5.jpg'
+										data-group = 'group-5'
+										data-id = 'b'
+										src="../image/clothes/5.jpg" 
+										width='520' 
+										height='280' 
+										alt='水彩渲染的世界'>
+						<span class='count_tips'></span>
+					</div>
+					<div class='w_text'>
+						<a href="">伊丝艾拉YISELLE:</a>
+						</br>
+						<p>伊丝艾拉YISELLE泳衣专场</p>
+					</div>
+				</div>
+				<div class='w_option' id='w_option'>
+					<div class='item'><a href="javascript:void(0)">关注</a></div>
+					<div class='item'><a href="javascript:void(0)">赞</a></div>
+				</div>
+			</div>
+		</div>
+		<div class='w_div'>
+			<div class='w_face'><a href=""><img src="../image/face/t0198b9a909c671de08.jpg" width='75' height="80"></a></div>
+			<div class='w_content'>
+				<div class='w_who'>
+					<div class='item'><a href="">美之藤</a><span>分享</span></div>
+				</div>
+				<div class='w_ct'>
+					<div class='w_img'>
+						<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/clothes/18508179_570x273_90.jpg'
+										data-group = 'group-8'
+										data-id = 'b'
+										src="../image/clothes/18508179_570x273_90.jpg" 
+										width='520' 
+										height='280' 
+										alt='水彩渲染的世界'>
+						<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/clothes/2.jpg'
+										data-group = 'group-8'
+										data-id = 'b'
+										src="../image/clothes/2.jpg" 
+										width='520' 
+										height='280' 
+										alt='水彩渲染的世界'>
+						<span class='count_tips'></span>
+					</div>
+					<div class='w_text'>
+						<a href="">美之藤:</a>
+						</br>
+						<p>转载自：Nobuko Studio</p>
+					</div>
+				</div>
+				<div class='w_option' id='w_option'>
+					<div class='item'><a href="javascript:void(0)">关注</a></div>
+					<div class='item'><a href="javascript:void(0)">赞</a></div>
+				</div>
+			</div>
+		</div>
+		<div class='w_div'>
+			<div class='w_face'><a href=""><img src="../image/logo.png" width='75' height="80"></a></div>
+			<div class='w_content'>
+				<div class='w_who'>
+					<div class='item'><a href="">分享社</a><span>分享</span></div>
+				</div>
+				<div class='w_ct'>
+					<div class='w_img'>
+						<img  class = 'js_lightbox'
+										data-role = 'lightbox'
+										data-source = '../image/ad/20140928134222352235.jpg'
+										data-group = 'group-9'
+										data-id = 'b'
+										src="../image/ad/20140928134222352235.jpg" 
+										width='520' 
+										height='280' 
+										alt='水彩渲染的世界'>
+						<span class='count_tips'></span>
+					</div>
+					<!-- <div class='w_text'>
+						<a href="">分享社:</a>
+						</br>
+						<p>伊丝艾拉YISELLE泳衣专场</p>
+					</div> -->
+				</div>
+				<!-- <div class='w_option' id='w_option'>
+					<div class='item'><a href="">关注</a></div>
+					<div class='item'><a href="">赞</a></div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<!-- w_div end -->
+	<div class='w_ad right_box'>
+		<div class='video_div'	style ='box-shadow: 0 0 2px #5f5959';>
+			<div class='vedio_img'><a href=""><img src="../image/ad/laojiumen.jpg" width='250' height='135' ></a></div>
+			<div class='vedio_text'><a href="">推广：盗墓笔记后传《老九门》</a></div>
+		</div>
+		<div class='ad_div'>
+			<div class='ad_img'><a href=""><img src="../image/ad/ad_img1.jpg " width='250' height='170'></a></div>
+			<div class='ad_shadow'></div>			
+			<div class='ad_text'><a href="">多点真诚，少点套路</a></div>
+		</div>
+		<div class='pop_div'>
+			<div class='pop_text'>
+				<span>晒达人：</span>
+			</div>
+			<div class='pop_face'>
+				<div><a href=""><img src="../image/face/201212512571786.jpg" width='73' height='70'></a></div>
+				<div class='face_margin'><a href=""><img src="../image/face/19-092726_728.jpg" width='73' height='70'></a></div>
+				<div><a href=""><img src="../image/face/t0144582bdf5a165579.jpg" width='73' height='70'></a></div>
+				<div><a href=""><img src="../image/face/t0140de1c6f4f731df9.jpg" width='73' height='70'></a></div>
+				<div class='face_margin'><a href=""><img src="../image/face/20140817210028_BrXVM.png" width='73' height='70'></a></div>
+				<div><a href=""><img src="../image/face/201282723198335.jpg" width='73' height='70'></a></div>
+				<div><a href=""><img src="../image/face/201212512571786.jpg" width='73' height='70'></a></div>
+				<div class='face_margin'><a href=""><img src="../image/face/19-092726_728.jpg" width='73' height='70'></a></div>
+				<div><a href=""><img src="../image/face/t0144582bdf5a165579.jpg" width='73' height='70'></a></div>
+				<div><a href=""><img src="../image/face/t0140de1c6f4f731df9.jpg" width='73' height='70'></a></div>
+				<div class='face_margin'><a href=""><img src="../image/face/20140817210028_BrXVM.png" width='73' height='70'></a></div>
+				<div><a href=""><img src="../image/face/2016-07-13_212853.png" width='73' height='70'></a></div>
+			</div>
+		</div>
+	</div>
+	<!-- w_ad end -->
+</div>
+
+<div class="foot bottomBox">
+	<div class="foot_main">
+		<div class="fm_menu">
+			<ul>
+				<li><a href="/about_us.html" target="_blank" style='border-left:none;'>关于我们</a><span></span></li>
+				<li><a href="/contact.html" target="_blank">联系我们</a><span></span></li>
+				<li><a href="/join_us.html" target="_blank">加入我们</a><span></span></li>
+				<li><a href="/feedback.html" target="_blank">意见反馈</a><span></span></li>
+				<li><a href="/disclaimer.html" target="_blank">免责申明</a><span></span></li>
+				<li><a href="/friendly_link.html" target="_blank">友情链接</a><span></span></li>
+				<li><a href="/AD.html" target="_blank">商务合作</a></li>
+			</ul>
+		</div>
+		<div class="fm_copyright">Copyright © 2016 fenxiang.com 分享社-让世界享你所享 保留所有权利</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(window).on('load',function(){
+		var p_Face = $('.personalFace'),
+			  p_Item = $('#personalItem');
+
+		if(p_Face.hasClass('defaultFace')){
+			p_Face.attr('id', 'login');
+		}
+		
+		$(function(){
+			var login = new Login();
+		});
+		$(function(){
+			var lightbox = new LightBox();
+		});
+
+		$("#loginBtn").click(function(){ 
+			$.ajax({ 
+			    type: "POST", 
+			    async:false,	
+				url: "../php/login.php",
+				data: {
+					username: $("#inputName").val(), 
+					password: $("#inputPassword").val()
+				},
+				dataType: "json",
+				success: function(data) {
+					if (data== 0) {
+						alert('未填写账号或密码！');
+					} else if(data[0]== 1) {
+						alert('账号或密码错误！');
+					} else if(data[0]== 2) {
+						$('#img').attr('src','../image/face/'+data[1]);
+						alert('用户登录成功！' +data[1]);
+					}
+				},
+				error: function(jqXHR){     
+				   alert("发生错误：" + jqXHR.status);  
+				},
+		});
+			
+	});	
+
+  	})
+  	
+</script>
+</body>
+</html>

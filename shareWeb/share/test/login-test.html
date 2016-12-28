@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>分享社-让世界享你所享</title>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-compatible" content='IE=edge'>
+	<link type="image/x-icon" href="../favicon/favicon.ico" rel="shortcut icon" />
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<meta name='keywords' content='分享，摄影，衣橱，美妆'>
+	<meta name='discription' content='分享社网-让世界享你所享'>
+	<!-- 引入css文件资源 -->
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="../css/PersonalCenter.css">
+
+	<!-- 引入js资源 -->
+	<script type="text/javascript" src='../script/jquery.js'></script>
+	<script type="text/javascript" src='../script/jquery-1.12.0.min.js'></script>
+	<script type="text/javascript" src='../script/main.js'></script>
+	<script type="text/javascript" src='../script/login.js'></script>
+	<script type="text/javascript" src='../script/lightbox.js'></script>
+</head>
+<body>
+<div class='container'>
+	<div class='topBar'>
+		<div class='logo'><a href=""><img src="../image/logotext.png" height='80' width='180'></a></div>
+		<div class='search'>
+			<input type='text' placeholder='沈格格' />
+			<a href="#" type='button' ><i class='icon-search'></i>&nbsp;</a>
+		</div>
+		<div class='personalCenter' id = 'PCenter' > 
+			<div class = 'personalFace defaultFace'>
+				<a href="javascript:void(0)"><img src="../image/face.png" width='50' height='50'></a>
+			</div>
+			<div class = 'personalItem' id = "personalItem"> 
+				<ul>
+					<li><a href="">个人资料</a></li>
+					<li><a href="">权限设置</a></li>
+					<li><a href="">好友列表</a></li>
+					<li><a href="">退出</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class='navBox'  id='navBox'>
+		<div class='item hover'>
+			<a href="../html/personalCenter.html">个人资料</a>
+		</div>
+		<div class='item'>
+			<a href="../html/permission.html">权限设置</a>
+		</div>
+		<div class='item'>
+			<a href="../html/friends.html">好友列表</a>
+		</div>
+		<div class='item'>
+			<a href='../html/exit.html'>退出</a>
+		</div>
+		<div class='item'>
+			<a href="../html/aboutUs.html">关于我们</a>
+			<!-- more_topic center -->
+			
+		</div>		
+	</div>	
+</div>
+<div class='wrap'>
+	
+</div>
+<script type="text/javascript">
+	$(window).on('load',function(){
+		var p_Face = $('.personalFace'),
+			  p_Item = $('#personalItem');
+
+			if(p_Face.hasClass('defaultFace')){
+				p_Face.attr('id', 'login');
+			}
+		
+		$(function(){
+			var login = new Login();
+		});
+		$(function(){
+			var lightbox = new LightBox();
+		});
+
+  })
+</script>
+</body>
+</html>

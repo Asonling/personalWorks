@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>分享社-让世界享你所享</title>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-compatible" content='IE=edge'>
+  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+	<link type="image/x-icon" href="../favicon/favicon.ico" rel="shortcut icon" />
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<meta name='keywords' content='分享，摄影，衣橱，美妆'>
+	<meta name='discription' content='分享社网-让世界享你所享'>
+	<link rel="stylesheet" type="text/css" href="../css/homePage.css">
+	<link rel="stylesheet" type="text/css" href="../css/shoot.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="./personalCenter.css">
+	<script type="text/javascript" src='../script/jquery.js'></script>
+	<script type="text/javascript" src='../script/jquery-1.12.0.min.js'></script>
+	<script type="text/javascript" src='./personalCenter.js'></script>
+	<script type="text/javascript" src='../script/main.js'></script>
+	<script type="text/javascript" src='../script/picView.js'></script>
+	<script type="text/javascript" src='../script/lightbox.js'></script>
+	
+	<script type="text/javascript">
+    function inputEvent(obj){
+        if(obj.value){
+            document.getElementsByTagName('label')[0].style.visibility = "hidden";
+        }else{
+            document.getElementsByTagName('label')[0].style.visibility = "visible";
+        }        
+    }
+    function labelEvent(){
+        document.getElementsByTagName('input')[0].focus();
+    }
+    </script>
+    <style type="text/css">
+		.search input[type=text]::-ms-clear{
+		display: none;
+		}
+	</style>
+</head>
+<body>
+<div class='container'>
+	<div class='topBar' style='position: relative;'>
+		<div class='logo'><a href=""><img src="../image/logotext.png" height='80' width='180'></a></div>
+		<div class='search'>
+			<label style="position:absolute;top:4px;color:gray;"  onclick="labelEvent()">沈格格</label> 
+			<input type='text' onkeyup="inputEvent(this)"/>
+			<a href="#" type='button' ><i class='icon-search'></i>&nbsp;</a>			
+		</div>
+		<div class='personalCenter' id = 'PCenter' > 
+			<div class = 'personalFace defaultFace'>
+				<a href="javascript:void(0)"><img src="../image/face.png" width='50' height='50'></a>
+			</div>
+			<div class = 'personalItem' id = "personalItem"> 
+				<ul>
+					<li><a href="">个人资料</a></li>
+					<li><a href="">权限设置</a></li>
+					<li><a href="">好友列表</a></li>
+					<li><a href="">退出</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<div class='navBox' id='navBox'>
+		<div class='item hover'>
+			<a href="javascript:void(0)">首页</a>
+		</div>
+		<div class='item'>
+			<a href="../html/shoot.html" >摄影</a>
+		</div>
+		<div class='item'>
+			<a href="../html/clothes.html">衣橱</a>
+		</div>
+		<div class='item' id = 'login' >
+			<a href='javascript:void(0)'>登录</a>
+		</div>
+		<div class='item'>
+			<a href="../html/aboutUs.html">关于我们</a>
+			<!-- more_topic center -->
+			<div></div>
+		</div>		
+	</div>	
+</div>
+
+<script type="text/javascript">
+	$(window).on('load',function(){
+		var p_Face = $('.personalFace'),
+			  p_Item = $('#personalItem');
+
+			if(p_Face.hasClass('defaultFace')){
+				p_Face.attr('id', 'login');
+			}
+		
+		$(function(){
+			var login = new Login();
+		});
+		$(function(){
+			var lightbox = new LightBox();
+		});
+
+  })
+	
+</script>
+</body>
+</html>

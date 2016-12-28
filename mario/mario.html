@@ -1,0 +1,123 @@
+<!doctype html>
+<html><head><title>乌龟抓鸡</title></head>
+<body>
+<script language="javascript">
+<!--
+	function move(obj){
+		var wugui_height=71;
+		var wugui_width=71;
+		var cock_height=78;
+		var cock_width=81;
+		var wugui=document.getElementById("wugui");
+		if(window.event){
+			key=obj.keyCode;
+		}
+		//得到乌龟的位置，具体坐标
+		var wugui_top=wugui.style.top;
+		var wugui_left=wugui.style.left;
+		wugui_top=parseInt(wugui_top.substring(0,wugui_top.indexOf("p")));
+		wugui_left=parseInt(wugui_left.substring(0,wugui_left.indexOf("p")));
+		myimg=document.getElementById("myimg");
+		//start to move
+		if(obj.value=="向右走"||key==83){
+			myimg.src="4.png";
+			if(wugui_left==230){
+				wuigui_left=wuigui_left+0;
+				wugui.style.left=(wugui_left+0)+"px";				
+			}else{
+				wugui.style.left=(wugui_left+10)+"px";
+				wugui_left=wugui_left+10;
+			}
+		}else if(obj.value=="向左走"||key==68){
+			myimg.src="3.png";
+			if(wugui_left==0){
+				wuigui_left=wuigui_left+0;
+				wugui.style.left=(wugui_left+0)+"px";				
+			}else{
+				wugui.style.left=(wugui_left-10)+"px";
+				wugui_left=wugui_left-10;
+			}
+		}else if(obj.value=="向上走"||key==87){
+			
+			myimg.src="1.png";
+			if(wugui_top==0){
+				wuigui_top=wuigui_top+0;
+				wugui.style.top=(wugui_top+0)+"px";				
+			}else{
+				wugui.style.top=(wugui_top-10)+"px";
+				wugui_top=wugui_top-10;
+			}
+		}else if(obj.value=="向下走"||key==65){
+			myimg.src="2.png";
+			if(wugui_top==230){
+				wuigui_top=wuigui_top+0;
+				wugui.style.top=(wugui_top+0)+"px";				
+			}else{
+				wugui.style.top=(wugui_top+10)+"px";
+				wugui_top=wugui_top+10;
+			}
+		}
+		//make sure weather the turtle touch the cock.
+		var cock=document.getElementById("cock");
+		var cock_top=cock.style.top;
+		var cock_left=cock.style.left;
+		cock_top=parseInt(cock_top.substring(0,cock_top.indexOf("p")));
+		cock_left=parseInt(cock_left.substring(0,cock_left.indexOf("p")));
+		//window.alert("hello!");
+		y=Math.abs(cock_top-wugui_top);
+		x=Math.abs(cock_left-wugui_left);
+		xx=0;
+		yy=0;
+		if(wugui_top<cock_top){
+			if(y<wugui_height){
+				yy=1;
+			}
+		}else{
+			if(y<cock_height){
+				yy=1;
+			}
+		}
+		if(wugui_left<cock_left){
+			if(x<wugui_width){
+				xx=1;
+			}		
+		}else{
+			if(x<cock_width){
+				xx=1;
+			}
+		}
+		if(yy==1&&xx==1){
+			window.alert("乌龟真猛！顶！");
+			wugui.style.left=120+"px";
+			wugui.style.top=100+"px";
+		}
+	}
+//-->
+</script>
+<table>
+<tr>
+<td></td>
+<td><input type="button" value="向上走" onclick="move(this)"/></td>
+<td></td>
+</tr>
+<tr>
+<td><input type="button" value="向左走" onclick="move(this)"/></td>
+<td></td>
+<td><input type="button" value="向右走" onclick="move(this)"/></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="button" value="向下走" onclick="move(this)"/></td>
+<td></td>
+</tr>
+</table>
+<div style="position:absolute;height:300px;width:300px;border:1px solid black;">
+<div id="wugui" style="position:absolute;left:100px;top:120px;">
+<img id="myimg" src="1.png"  alt=""/ >
+</div>
+<div id="cock" style="left:200px;position:absolute;top:200px;">
+<img src="cock.png"  alt=""/>
+</div>
+</div>
+</body>
+</html> 
